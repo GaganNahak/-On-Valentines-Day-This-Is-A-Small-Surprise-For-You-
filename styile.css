@@ -1,0 +1,314 @@
+body {
+   padding: 0%;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: pink;
+   flex-direction: column;
+}
+@keyframes heartbeat{
+   0%{
+      scale: 0.25;
+   }
+   25%{
+      scale: 0.5;
+   }
+   50%{
+      scale: 1;
+   }
+   100%{
+      scale: 0.25;
+   }
+}
+#mainHeart {
+   position: relative;
+   height: 50px;
+   width: 50px;
+   background-color: red;
+   transform: rotate(-43deg);
+   margin-left: 90px;
+   margin-top: 40px;
+   z-index: 10;
+   animation: heartbeat 1s infinite ease-in-out;
+}
+
+#mainHeart::before,
+#mainHeart::after {
+   content: "";
+   position: absolute;
+   height: 50px;
+   width: 50px;
+   border-radius: 25px;
+   background-color: red;
+}
+
+#mainHeart::before {
+   left: 0px;
+   top: -25px;
+   /* border: 1px solid rgb(166, 238, 130); */
+}
+
+#mainHeart::after {
+   left: 25px;
+   top: 0px;
+}
+
+#main {
+   animation: cont 3s infinite ease-in-out;
+
+}
+
+.container {
+   height: 240px;
+   width: 272px;
+   background-color: rgb(255, 92, 119);
+   border-radius: 10px;
+   /* border-top: 2px solid rgba(106, 20, 34, 0.511); */
+   /* transform: skew(-10px); */
+
+}
+
+@keyframes cont {
+   0% {
+      transform: translateY(0px);
+   }
+
+   50% {
+      transform: translateY(-40px);
+   }
+
+   100% {
+
+      transform: translateY(0px);
+   }
+}
+
+.holder {
+   position: relative;
+
+   height: 80%;
+   top: -20px;
+   left: 10px;
+   width: 90%;
+   font-size: 30px;
+   color: azure;
+   background-color: rgb(237, 174, 122);
+   border: 5px dotted white;
+   text-align: center;
+   box-shadow: 0px 0px 20px black; transition: transform 1s ease-in-out;
+   animation: bord 2s infinite ease-in-out;
+}
+
+@keyframes bord{
+   0%{
+      border: 5px dotted white;
+   }
+   50%{
+      border: 5px dotted rgba(255, 255, 255, 0.215);
+   }
+   100%{
+      border: 5px dotted white;
+   }
+}
+#heartedBUt {
+   z-index: 13;
+   position: relative;
+   height: 5px;
+   width: 5px;
+   background-color: red;
+   transform: rotate(-43deg);
+   z-index: 10;
+}
+
+.holder:hover {
+  
+
+
+   transform: translateY(-90px);
+}
+
+.container::before {
+   content: "";
+   height: 200px;
+   width: 198px;
+   background-color: rgb(255, 92, 119);
+   position: absolute;
+   transform: translateX(52px);
+   /* position:relative; */
+   rotate: 45deg;
+   border-radius: 10px;
+   top: -130px;
+   z-index: -1;
+   /* border: 1px solid black; */
+}
+
+.text {
+   font-style: italic;
+   transform: translateY(-20px);
+}
+
+.heart {
+   position: relative;
+   height: 5px;
+   width: 5px;
+   background-color: red;
+   transform: rotate(-43deg);
+   z-index: 10;
+
+}
+
+.heart::before,
+.heart::after {
+   content: "";
+   position: absolute;
+   height: 5px;
+   width: 5px;
+   border-radius: 2.5px;
+   background-color: red;
+}
+
+.heart::before {
+   left: 0px;
+   top: -2.5px;
+}
+
+.heart::after {
+   left: 2.5px;
+   top: 0px;
+}
+
+#heart1 {
+   top: 200px;
+   left: 10px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 5s infinite ease-out;
+}
+
+#heart2 {
+   top: 150px;
+   left: 10px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 3s infinite ease-out;
+}
+
+#heart3 {
+   top: 150px;
+   left: 10px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 2s infinite ease-out;
+}
+
+#heart4 {
+   top: 150px;
+   left: 10px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 5s infinite ease-out;
+}
+
+#heart5 {
+   top: 150px;
+   left: 10px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 3s infinite ease-out;
+}
+
+#heart6 {
+   top: 150px;
+   left: 0px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 2s infinite ease-out;
+}
+
+#heart7 {
+   top: 150px;
+   left: 0px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 5s infinite ease-out;
+}
+
+#heart8 {
+   top: 150px;
+   left: 0px;
+   display: inline-block;
+   margin: 10px;
+   animation: heartAn 2s infinite ease-out;
+}
+
+@keyframes heartAn {
+   0% {
+      opacity: 0.4;
+      scale: 1;
+   }
+
+   100% {
+      opacity: 1;
+
+      top: -50px;
+      scale: 2;
+   }
+}
+
+.hider {
+   position: relative;
+   border-right: 180px solid rgb(255, 65, 96);
+   border-top: 105px solid transparent;
+   margin: 0px;
+   padding: 0px;
+   border-bottom: 132px solid transparent;
+   left: 93px;
+   top: -170px;
+   z-index: 10;
+   height: 0;
+   width: 0;
+}
+
+.hider::before {
+   content: "";
+   position: absolute;
+   border-left: 271px solid rgb(254, 92, 119);
+   border-top: 240px solid transparent;
+   margin: 0px;
+   padding: 0px;
+
+   left: -91px;
+   top: -108px;
+}
+
+#mainHeart {
+   scale: 0.5;
+   margin-bottom: -50px;
+}
+
+.shadow {
+
+   margin-top: 30px;
+   height: 50px;
+   width: 300px;
+   background-color: rgba(0, 0, 0, 0.266);
+   border-radius: 50%;
+   animation: shadow 3s infinite ease-in-out;
+}
+
+@keyframes shadow {
+   0% {
+      scale: 1;
+   }
+
+   50% {
+
+      scale: 0.5;
+   }
+
+   100% {
+      scale: 1;
+   }
+}
