@@ -13,6 +13,7 @@
             <div class="container">
                 <div class="holder">
                     <!-- <button   id="but">CLICK</button> -->
+                    <div id="heartText">Hover To Open</div>
                      <div  id="mainHeart"></div>
                     <div class="heart" id="heart1"></div>
                     <div class="heart" id="heart2"></div>
@@ -31,7 +32,28 @@
 
             
         </div>
-        <div class="shadow"></div>
+        <div class="shadow" id="shadow"></div>
+<script>
+
+
+
+if(window.innerWidth<500){
+    document.getElementById("heartText").style.border="1px solid rgba(255, 255, 255, 0.529)"
+    document.getElementById("heartText").innerHTML="Tap To Open"
+     document.getElementById("heartText").addEventListener("click",()=>{
+        document.getElementById("heartText").style.border="none"
+        document.getElementById("heartText").innerHTML=""
+        document.getElementById("shadow").innerHTML="Tap To Close"
+    })
+    document.getElementById("shadow").addEventListener("click",()=>{
+        document.getElementById("heartText").style.border="1px solid rgba(255, 255, 255, 0.529)"
+         document.getElementById("shadow").style.fontSize="large"
+        document.getElementById("heartText").innerHTML="Tap To Open"
+        document.getElementById("shadow").innerHTML=""
+    })
+}
+   
+</script>
 
     </body>
 
