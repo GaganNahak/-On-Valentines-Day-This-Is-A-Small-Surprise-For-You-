@@ -1,4 +1,4 @@
-body {
+ body {
    padding: 0%;
    box-sizing: border-box;
    display: flex;
@@ -8,6 +8,9 @@ body {
    background-color: pink;
    flex-direction: column;
 }
+#heartText{
+   border-radius: 20px;
+}
 @keyframes heartbeat{
    0%{
       scale: 0.25;
@@ -16,24 +19,25 @@ body {
       scale: 0.5;
    }
    50%{
-      scale: 1;
+      scale: 0.75;
    }
    100%{
       scale: 0.25;
    }
 }
+
 #mainHeart {
    position: relative;
    height: 50px;
    width: 50px;
    background-color: red;
    transform: rotate(-43deg);
-   margin-left: 90px;
-   margin-top: 40px;
+   margin-left: 95px;
+   margin-top: 0px;
    z-index: 10;
+   color: white;
    animation: heartbeat 1s infinite ease-in-out;
 }
-
 #mainHeart::before,
 #mainHeart::after {
    content: "";
@@ -265,7 +269,7 @@ body {
    padding: 0px;
    border-bottom: 132px solid transparent;
    left: 93px;
-   top: -170px;
+   top: -176px;
    z-index: 10;
    height: 0;
    width: 0;
@@ -278,9 +282,9 @@ body {
    border-top: 240px solid transparent;
    margin: 0px;
    padding: 0px;
-
-   left: -91px;
-   top: -108px;
+/* rotate: -1deg; */
+   left: -92px;
+   top: -109px;
 }
 
 #mainHeart {
@@ -295,6 +299,8 @@ body {
    width: 300px;
    background-color: rgba(0, 0, 0, 0.266);
    border-radius: 50%;
+   color: white;
+   text-align: center;
    animation: shadow 3s infinite ease-in-out;
 }
 
